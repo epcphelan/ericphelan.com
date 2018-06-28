@@ -1,0 +1,16 @@
+{
+  "name": "ericphelan",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "app.js",
+  "author": "Eric Phelan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.0",
+    "body-parser":"1.10.x",
+    "nodemailer": "^2.2.1",
+    "bowser":"1.8.1",
+    "mysql":"2.15.0",
+    "superagent": "^2.2.0"
+  }
+}

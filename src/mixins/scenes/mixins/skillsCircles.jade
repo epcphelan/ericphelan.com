@@ -1,0 +1,98 @@
+mixin codingSkills()
+    .circle-detail
+        .label
+        .pointer
+    .donut-wrap.pull-left.coding-skills
+        .donut
+            svg(version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+            width="240px" height="240px"
+            xml:space="preserve" transform-origin="0px")
+                g(transform="translate(120, 120)")
+                    circle(r="35" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:0:value,ring-label|cv:skills:dev:specs:0:name")
+                    circle(r="40" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:1:value,ring-label|cv:skills:dev:specs:1:name")
+                    circle(r="45" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:2:value,ring-label|cv:skills:dev:specs:2:name")
+                    circle(r="50" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:3:value,ring-label|cv:skills:dev:specs:3:name")
+                    circle(r="55" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:4:value,ring-label|cv:skills:dev:specs:4:name")
+                    circle(r="60" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:5:value,ring-label|cv:skills:dev:specs:5:name")
+                    circle(r="75" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:6:value,ring-label|cv:skills:dev:specs:6:name")
+                    circle(r="80" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:7:value,ring-label|cv:skills:dev:specs:7:name")
+                    circle(r="90" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:8:value,ring-label|cv:skills:dev:specs:8:name")
+                    circle(r="95" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:9:value,ring-label|cv:skills:dev:specs:9:name")
+                    circle(r="100" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:dev:specs:10:value,ring-label|cv:skills:dev:specs:10:name")
+            .label(data-text-io="cv:skills:dev:title")
+            .value-label
+
+mixin financeSkills()
+    .donut-wrap.pull-left.finance-skills
+        .donut
+            svg(version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+            width="120px" height="120px"
+            xml:space="preserve" transform-origin="0px")
+                g(transform="translate(60, 60)")
+                    circle(r="35" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:finance:specs:0:value,ring-label|cv:skills:finance:specs:0:name")
+                    circle(r="40" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:finance:specs:1:value,ring-label|cv:skills:finance:specs:1:name")
+                    circle(r="45" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:finance:specs:2:value,ring-label|cv:skills:finance:specs:2:name")
+                    circle(r="50" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:finance:specs:3:value,ring-label|cv:skills:finance:specs:3:name")
+            .label(data-text-io="cv:skills:finance:title")
+            .value-label
+
+mixin uiUxSkills()
+    .donut-wrap.pull-left.ui-ux-skills
+        .donut
+
+            svg(version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+            width="150px" height="150px"
+            xml:space="preserve" transform-origin="0px")
+                g(transform="translate(75, 75)")
+                    circle(r="35" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:uiUx:specs:0:value,ring-label|cv:skills:uiUx:specs:0:name")
+                    circle(r="45" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:uiUx:specs:1:value,ring-label|cv:skills:uiUx:specs:1:name")
+                    circle(r="50" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:uiUx:specs:2:value,ring-label|cv:skills:uiUx:specs:2:name")
+                    circle(r="55" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:uiUx:specs:3:value,ring-label|cv:skills:uiUx:specs:3:name")
+            .label(data-text-io="cv:skills:uiUx:title")
+            .value-label
+
+mixin dataSkills()
+    .donut-wrap.pull-left.data-skills
+        .donut
+            svg(version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+            width="100px" height="100px"
+            xml:space="preserve" transform-origin="0px")
+                g(transform="translate(50, 50)")
+                    circle(r="25" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:research:specs:0:value,ring-label|cv:skills:research:specs:0:name")
+                    circle(r="30" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:research:specs:1:value,ring-label|cv:skills:research:specs:1:name")
+                    circle(r="35" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:research:specs:2:value,ring-label|cv:skills:research:specs:2:name")
+                    circle(r="35" class="circle-front" transform="rotate(90)" data-attr-io="value|cv:skills:research:specs:3:value,ring-label|cv:skills:research:specs:3:name")
+            .label(data-text-io="cv:skills:research:title")
+            .value-label
+
+mixin productDesign()
+    .bubble-wrap.product-design-bubble.pull-left
+        .bubble
+            .label(data-text-io="cv:skills:productDesign:title")
+
+mixin projectManagement()
+    .bubble-wrap.project-management-bubble.pull-left
+        .bubble
+            .label(data-text-io="cv:skills:pm:title")
+
+mixin startupExperience()
+    .bubble-wrap.startup-experience-bubble.pull-left
+        .bubble
+            .label(data-text-io="cv:skills:founder:title")
+
+mixin skillsList()
+    .skill-list-wrap
+        .close.pull-right X
+        .header.pull-left
+        .clearfix
+        ul.skills
+
+mixin skillTemplate()
+    script(id="skill-detail-template" type="text/template")
+        li
+            .name.pull-left {{{name}}}
+            .value-bar.pull-left
+                .wrap
+                    .bar(style="width:{{{barWidth}}}")
+            .clearfix
+

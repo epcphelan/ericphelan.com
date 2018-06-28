@@ -1,0 +1,133 @@
+mixin vagabondStartup()
+    script(id="vagabond-startup-case" type="text/template")
+        .case-study.vagabond-startup.site-monitor-page(data-track-target="VagabondStartup")
+            .hero
+                .hint-header
+                    .number 02
+                    .label(data-text-io="cases:vs:superTitle")
+                .title(data-text-io="cases:vs:title")
+                .subtitle(data-text-io="cases:vs:subtitle")
+            .case-study-content
+                .introduction
+                    .left
+                        .summary-container
+                            .client-logo
+                                img(src="http://assets.ericphelan.com/img/logos/vagabond_startup_horizontal.png")
+                            ul.details
+                                li
+                                    .label(data-text-io="cases:labels:role")
+                                    .value(data-text-io="cases:vs:role")
+                                li
+                                    .label(data-text-io="cases:labels:engagement")
+                                    .value(data-text-io="cases:vs:engagement")
+                                li
+                                    .label(data-text-io="cases:labels:funding")
+                                    .value(data-text-io="cases:glamAndGo:funding")
+                                li
+                                    .label(data-text-io="cases:labels:tech")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:vs:tech:0")
+                                            li(data-text-io="cases:vs:tech:1")
+                                            li(data-text-io="cases:vs:tech:2")
+                                            li(data-text-io="cases:vs:tech:3")
+                                            li(data-text-io="cases:vs:tech:4")
+                                            li(data-text-io="cases:vs:tech:5")
+                                            li(data-text-io="cases:vs:tech:6")
+
+                                    .clearfix
+                                li
+                                    .label(data-text-io="cases:labels:integrations")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:vs:integrations:0")
+                                            li(data-text-io="cases:vs:integrations:1")
+                                    .clearfix
+
+                    .right
+                        .intro-text
+                            h4(data-text-io="cases:labels:introduction")
+                            p(data-text-io="cases:vs:introduction:paragraphs:0")
+                            p(data-text-io="cases:vs:introduction:paragraphs:1")
+                            p(data-text-io="cases:vs:introduction:paragraphs:2")
+
+                        .contributions.scroll-effect.in-up
+                            h4(data-text-io="cases:labels:experience")
+                            ul
+                                li
+                                    .name(data-text-io="cases:vs:experiences:0")
+                                li
+                                    .name(data-text-io="cases:vs:experiences:1")
+                                li
+                                    .name(data-text-io="cases:vs:experiences:2")
+                                li
+                                    .name(data-text-io="cases:vs:experiences:3")
+                                li
+                                    .name(data-text-io="cases:vs:experiences:4")
+                                li
+                                    .name(data-text-io="cases:vs:experiences:5")
+                    .clearfix
+                .case-study-body
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:vs:sections:0:heading")
+                        h5(data-text-io="cases:vs:sections:0:subheading")
+                        .left.scroll-effect.in-left
+                            p.padding-20(data-text-io="cases:vs:sections:0:paragraphs:0")
+                        .right.scroll-effect.in-right
+                            .deep-dive
+                                ul.word-cloud
+                                    li.small(data-text-io="cases:vs:sections:0:names:0")
+                                    li.big(data-text-io="cases:vs:sections:0:names:1")
+                                    li.middle(data-text-io="cases:vs:sections:0:names:2")
+                                    li.small(data-text-io="cases:vs:sections:0:names:3")
+                                    li.middle(data-text-io="cases:vs:sections:0:names:4")
+                                    li.small(data-text-io="cases:vs:sections:0:names:5")
+                                    li.middle(data-text-io="cases:vs:sections:0:names:6")
+                        .clearfix
+                    .section.color-fill.business-dashboard.gray
+                        .container.scroll-effect.in-up
+                            h4(data-text-io="cases:vs:sections:1:heading")
+                            h5(data-text-io="cases:vs:sections:1:subheading")
+                            .blurb.center
+                                p(data-text-io="cases:vs:sections:1:paragraphs:0")
+                            .clearfix
+                            .imac-center
+                                .stretch-wrap-container
+                                    .stretch-content-container.macbook-wire-bg
+                                        video(loop autoplay)
+                                            source(src="http://assets.ericphelan.com/media/VagabondStartupHome_large.mov" type="video/mp4" )
+                                    img(src="http://assets.ericphelan.com/img/macbook-frame-stretch-bg-normal.png")
+                            .clearfix
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:vs:sections:2:heading")
+                        h5(data-text-io="cases:vs:sections:2:subheading")
+                        p(data-text-io="cases:vs:sections:2:paragraphs:0")
+                        p(data-text-io="cases:vs:sections:2:paragraphs:1")
+                        .film-reel
+                            ul.scroll-effect.in-right
+                                li
+                                    .film.site-monitor-click(data-track-target="Video: 1")
+                                        iframe(src="https://www.youtube.com/embed/E2Y1yOm8foI?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen)
+                                    .title(data-text-io="cases:vs:sections:2:films:0")
+                                    .description(data-text-io="cases:vs:sections:2:captions:0")
+                                li
+                                    .film.site-monitor-click(data-track-target="Video: 2")
+                                        iframe(src="https://www.youtube.com/embed/1QW2g_GU3TI?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen)
+                                    .title(data-text-io="cases:vs:sections:2:films:1")
+                                    .description(data-text-io="cases:vs:sections:2:captions:1")
+                                li
+                                    .film.site-monitor-click(data-track-target="Video: 3")
+                                        iframe(src="https://www.youtube.com/embed/zccuGP0u5Us?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen)
+                                    .title(data-text-io="cases:vs:sections:2:films:2")
+                                    .description(data-text-io="cases:vs:sections:2:captions:2")
+
+                    .section.summary.scroll-effect.in-up
+                        h4(data-text-io="cases:vs:sections:3:heading")
+                        p(data-text-io="cases:vs:sections:3:paragraphs:0")
+                    .footer
+                        .container
+                            .right.next-container
+                                .next-project.site-monitor-click(data-track-target="Case Next")
+                                    .label  NEXT
+                                        img(src="http://assets.ericphelan.com/img/right_arrow.png")
+

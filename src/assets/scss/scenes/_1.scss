@@ -1,0 +1,126 @@
+#scene-1{
+  z-index: 1000;
+  .background{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-color: gray;
+    video{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  .canvas{
+    transition: background-color 1s;
+    background-color: rgba(9, 0, 10, 0.6);
+    .down-arrow-circle{
+      opacity: 0.4;
+      cursor: pointer;
+      position: absolute;
+      bottom:10px;
+      left:0;
+      right:0;
+      margin-left: auto;
+      margin-right: auto;
+      width:36px;
+      height:36px;
+      z-index: 9999999;
+      transition: opacity 0.4s;
+      img{
+        position: absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width: 100%;
+        transition: opacity 0.7s;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        &.color-1{
+          animation-name: color-fade-1;
+        }
+        &.color-2{
+          animation-name: color-fade-2;
+        }
+      }
+      &.displayed{
+        opacity: 0.7;
+      }
+      &:hover{
+        opacity: 0.8;
+        img.arrow{
+          animation-name: arrow-bounce;
+          animation-duration: 1.5s;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+  }
+  .wrap{
+    position: relative;
+    left: 100px;
+    top: calc(50% - 80px);
+    color: white;
+    letter-spacing: 1.5px;
+    transition: all 0.6s;
+    //font-family:"Helvetica Neue",sans-serif;
+    .title{
+      font-size: 46px;
+      letter-spacing: 1.5px;
+      font-family:"Helvetica Neue",sans-serif;
+      font-weight: lighter;
+      margin-left: 0px;
+    }
+    .motto{
+      font-family: "Avenir", sans-serif;
+      letter-spacing: 0.5px;
+      font-weight: lighter;
+      margin-top: 3px;
+      font-size: 14px;
+    }
+  }
+  &.dropped{
+    .canvas{
+      background-color: rgba(4, 0, 4, 0.9);
+      .down-arrow-circle{
+        opacity: 0;
+      }
+
+    }
+
+    .wrap{
+      transform: translateY(50px);
+      opacity: 0.2;
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .wrap{
+    width:80%;
+    left:10% !important;
+    top: calc(75% - 100px) !important;
+    .title{
+      font-size: 42px !important;
+    }
+    .motto{
+      font-size: 11px !important;
+    }
+  }
+  .down-arrow-circle{
+
+    .circle{
+      display: none;
+    }
+  }
+}

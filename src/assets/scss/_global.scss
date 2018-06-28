@@ -1,0 +1,750 @@
+html{
+  overflow: hidden;
+  height:100%;
+}
+body{
+  margin:0 !important;
+  height: calc(100% + 2px);
+  overflow: auto;
+  font-family: 'Avenir', sans-serif;
+  line-height: normal;
+  color: rgb(50,50,50);
+  a{
+    .icon{
+      height:20px;
+      width:20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      &.facebook{
+        background-image: url("http://assets.ericphelan.com/img/logos/facebook_icon.png");
+      }
+      &.instagram{
+        background-image: url("http://assets.ericphelan.com/img/logos/instagram_icon.png");
+      }
+      &.linkedin{
+        background-image: url("http://assets.ericphelan.com/img/logos/linkedin_icon.png");
+      }
+    }
+  }
+  .slide-deck{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: calc(100% + 2px);
+    transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0s;
+    .slide-container{
+      height: calc(100%);
+      width: calc(100%);
+      position: absolute;
+      left:0;
+      top:0;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      transition: right 0.2s cubic-bezier(.2,0.6,0.8,1.2);
+      &.resetting{
+        transition: transform 0.5s;
+      }
+      .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+      .canvas{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .fixed-navigation{
+    position: fixed;
+    z-index: 10500;
+    color:white;
+    transition: left 0.4s, color .6s;
+    left: calc(100% - 60px);
+    width:50px;
+    top:0;
+    .right-side-menu-icon{
+      margin-top:30px;
+      margin-left:3px;
+      cursor: pointer;
+      opacity: .7;
+      transition: opacity 0.3s;
+      &:hover{
+        opacity: 1;
+      }
+      .menu-trigger-line{
+        height:2px;
+        width: 20px;
+        background: white;
+        margin:5px;
+        transition: transform .35s, opacity .2s, background 0.6s;
+      }
+      &.displayed{
+        transform: translateX(-7px);
+        .menu-trigger-line{
+          &.top{
+            transform: rotate(-45deg) translateY(10px);
+          }
+          &.middle{
+            opacity: 0;
+          }
+          &.bottom{
+            transform: rotate(45deg) translateY(-10px);
+          }
+        }
+      }
+    }
+    .right-side-logo{
+      margin-top:50px;
+      height:30px;
+      width: 30px;
+      margin-left:4px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+      &:hover{
+        opacity: 0.7;
+      }
+      .logo{
+        height: 100%;
+        width: 100%;
+        background-image: url("http://assets.ericphelan.com/img/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    .right-side-languages{
+      margin-top:60px;
+      margin-left: -15px;
+      text-align: center;
+      .language{
+        opacity: 0.6;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: Avenir, SansSerif;
+        margin:10px 0 10px 0;
+        font-weight: 100;
+        transition: opacity 0.5s;
+        &:hover{
+          opacity: 0.8;
+        }
+        &.active{
+          opacity: 1;
+        }
+      }
+      .divider{
+        transition: background-color 0.6s;
+        height:1px;
+        background-color: white;
+        width:10px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .right-side-cv{
+      margin-top:60px;
+      height:52px;
+      width:36px;
+      background-image: url("http://assets.ericphelan.com/img/cv-download.png");
+      background-size: cover;
+      transition: opacity 0.3s;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .dynamic-menu{
+    &.displayed{
+      left:0;
+      opacity: .90;
+      transition: left .6s cubic-bezier(0,1,.5,1), opacity .45s;
+    }
+    &.fadeout{
+      opacity: 0;
+    }
+    top:0;
+    left:calc(100%);
+    height:100%;
+    width: 100%;
+    background: black;
+    position: fixed;
+    z-index: 9999;
+    color:white;
+    .nav-wrap{
+      margin-left: 25%;
+      margin-top: 10%;
+      .nav-title{
+        margin-bottom: 40px;
+        font-weight: 100;
+        font-family: SapientSans Medium,SapientSans Regular,Helvetica,Arial,sans-serif;
+        font-size: 10px;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+      }
+      nav{
+        li{
+          cursor: pointer;
+          font-size: 28px;
+          list-style:none;
+          color: #a4a4a4;
+          font-family: SapientCentroSlab Regular,serif;
+          line-height: 42px;
+          margin-left: 200px;
+          opacity: 0;
+          transition: opacity .3s, margin-left .3s;
+          &.displayed{
+            margin-left: 0;
+            opacity: .7;
+          }
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+      .hotlinks{
+        margin-top:30px;
+        opacity: 0;
+        transition: opacity 0s;
+        ul{
+          margin:0 0 0 -20px;
+          padding: 0;
+          li{
+            margin:10px 20px 10px 20px;
+            float: left;
+            list-style: none;
+          }
+        }
+        .contact-option{
+          margin-top:-10px;
+        }
+        img{
+          cursor: pointer;
+          opacity: 0.6;
+          transition: opacity 0.3s;
+          &:hover{
+            opacity: 0.9;
+          }
+        }
+        &.displayed{
+          opacity: .7;
+          transition: opacity 2.5s;
+        }
+      }
+    }
+    transition: left 0s, opacity .3s;
+  }
+
+  .pull-left{
+    float: left;
+    position: relative;
+  }
+
+  .pull-right{
+    float: right;
+    position: relative;
+  }
+
+  .quad{
+    width: 48%;
+    height: 48%;
+    position: absolute;
+    top:1%;
+    transition: box-shadow 0.5s;
+    //border-radius: 5px;
+    border: none;
+    &.pull-left {
+      left: 1.2%;
+    }
+    &.pull-right {
+      right: 1.2%;
+    }
+    &.bottom{
+      top:auto;
+      bottom:1%;
+    }
+  }
+
+  .clearfix{
+    clear:both;
+  }
+
+  .case-study-page-mask{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    top:0;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 8000;
+    background-color: black;
+    transition: opacity 0.6s, transform 0.4s;
+  }
+
+  .case-study-container{
+    position: fixed;
+    z-index: 9000;
+    height:100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    width:100%;
+    top:0;
+    left:100%;
+    background: white;
+    transition: left 0.4s;
+    .case-study-close-button{
+      position:fixed;
+      right:30px;
+      top:40px;
+      height:32px;
+      width:32px;
+      opacity: 0;
+      cursor: pointer;
+      transition: all 0.1s;
+      .line{
+        width:100%;
+        height:2px;
+        background-color:rgb(200,200,200);
+        &.top{
+          transform: rotate(-45deg) translateY(1px);
+        }
+        &.bottom{
+          transform: rotate(45deg) translateY(-1px);
+        }
+      }
+    }
+    .case-study-close-arrow{
+      position:fixed;
+      top:calc(50% - 25px);
+      left:-100px;
+      opacity: 0;
+      cursor: pointer;
+      background: url("http://assets.ericphelan.com/img/down-arrow-arrow.png");
+      background-size: cover;
+      height:50px;
+      width:50px;
+      transform: rotate(-90deg);
+      transition: transform .6s, left 1s;
+      &:hover{
+        transform: translateX(5px) rotate(-90deg);
+      }
+    }
+    .case-study-content-wrapper{
+      height:auto;
+      width:calc(100% - 100px);
+    }
+  }
+
+  .case-study-tab{
+    position: fixed;
+    height: 100px;
+    width: 60px;
+    background: black;
+    right:-60px;
+    z-index: 9000;
+    top:calc(50% - 50px);
+    color: white;
+    cursor: pointer;
+    transition: right 0.5s cubic-bezier(.2,0.6,0.8,1.2);
+    &:hover{
+      right:-5px !important;
+    }
+    &.displayed{
+      -webkit-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.75);
+      transition: right 0.2s cubic-bezier(.2,0.6,0.8,1.2);
+      right:-10px;
+    }
+    .tab-label{
+      width: 100px;
+      height: 60px;
+      text-align: center;
+      vertical-align: middle;
+      transform: rotate(-90deg) translateX(-20px);
+    }
+  }
+
+  &.case-study-displayed{
+    background: darkgray;
+    .case-study-page-mask{
+      opacity: 0.9;
+      transform: none;
+    }
+    .case-study-close-button{
+      opacity: 0.7;
+      transition: all .5s;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .case-study-close-arrow{
+      opacity: 0.8;
+      left:20px;
+    }
+    .case-study-close-tab{
+      height:40px;
+      width:40px;
+      position: absolute;
+      left: -40px;
+      background-image: url("http://assets.ericphelan.com/img/right-tab-arrow.png");
+      background-repeat: no-repeat;
+      top:calc(50% - 20px);
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover{
+        left:-30px;
+      }
+    }
+    .case-study-container{
+      left:100px;
+    }
+    .fixed-navigation{
+      left: 30px;
+    }
+    .dynamic-menu{
+      &.displayed{
+        left:0;
+        opacity: .90;
+        transition: left .6s cubic-bezier(0,1,.5,1), opacity .45s;
+      }
+      &.fadeout{
+        opacity: 0;
+      }
+      top:0;
+      left:-100%;
+      height:100%;
+      width: 100%;
+      background: black;
+      position: fixed;
+      z-index: 10001;
+      color:white;
+      .nav-wrap{
+        margin-right: 25%;
+        .nav-title{
+          text-align: right;
+        }
+        nav{
+          li{
+            margin-right: 200px;
+            text-align: right;
+            &.displayed{
+              margin-right: 0;
+              opacity: .7;
+            }
+          }
+        }
+      }
+      .hotlinks{
+        opacity: 0;
+        transition: opacity 0s;
+        ul{
+          li{
+            float: right;
+          }
+        }
+        &.displayed{
+          opacity: .7;
+          transition: opacity 2.5s;
+        }
+        text-align: right;
+      }
+      transition: left 0s, opacity .3s;
+    }
+  }
+
+  &.glam-and-go:not(.case-study-displayed){
+    .fixed-navigation{
+      color:black;
+      .right-side-menu-icon {
+        .menu-trigger-line {
+          background: black;
+        }
+      }
+      .right-side-logo{
+        .logo{
+          //background-image: url("http://assets.ericphelan.com/img/logo_black.png");
+        }
+      }
+      .right-side-languages{
+        .divider{
+          background-color: black;
+        }
+      }
+    }
+    #scene-3{
+      .left-timeline{
+        &:hover{
+          background: rgba(20,20,20,0.75);
+          ul.timeline{
+            li{
+              .timeline-container{
+                color:rgba(255,255,255,0.3);
+                &:hover{
+                  color:rgba(255,255,255,0.5)
+                }
+              }
+              &.active{
+                .timeline-container{
+                  color:rgba(255,255,255,1)
+                }
+              }
+            }
+          }
+        }
+        background: transparent;
+        color: rgba(0,0,0,0);
+        .line-wrap{
+          background-color: rgba(0,0,0,0.2);
+          .line-marker{
+            background-color: rgba(0,0,0,0.9);
+          }
+        }
+        ul.timeline{
+          li{
+            .timeline-container{
+              color:rgba(0,0,0,0.3);
+              &:hover{
+                color:rgba(0,0,0,0.5)
+              }
+            }
+            &.active{
+              .timeline-container{
+                color:rgba(0,0,0,1)
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  &.work-intro, &.contact{
+    .scroll-hint{
+      display: none;
+    }
+  }
+}
+
+.shooting-star{
+  position: absolute;
+  z-index: 99999;
+  background-color: rgb(250,200,100);
+  opacity: 1;
+  transition: opacity 1s, transform 1.2s cubic-bezier(0.15, 1, 0.8, 1);;
+  height: 4px;
+  width: 3px;
+  border-radius: 2px;
+  &.falling{
+    opacity: 0;
+  }
+}
+
+.scroll-hint{
+  position: fixed;
+  bottom: 8px;
+  height:50px;
+  width:50px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 2s;
+  z-index: 99999999;
+  cursor: pointer;
+  &.displayed{
+    opacity: 0.8;
+    &.faded{
+      opacity: 0.3;
+      .message{
+        .scroll{
+          opacity: 0;
+        }
+        .arrow{
+          opacity: 1;
+        }
+      }
+      &.dropped{
+        transition: all 1s;
+        transform: translateY(20px);
+        opacity: 0;
+      }
+    }
+  }
+  &.faded{
+
+  }
+  .mouse{
+    opacity: 0;
+    height: 26px;
+    width: 13px;
+    border-radius: 8px;
+    border: 1px solid white;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:4px;
+    left: 0;
+    right: 0;
+    .dot{
+      height:3px;
+      width: 3px;
+      border-radius: 1.5px;
+      background-color: white;
+      position: absolute;
+      left:5px;
+      top:12px;
+    }
+  }
+  .message{
+    color: white;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    height: 12px;
+    .arrow, .scroll{
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition-delay: 0.75s;
+      transition: opacity 1s;
+      position: absolute;
+      top:0;
+      height: 12px;
+      img{
+        height:100%;
+        width:100%;
+      }
+    }
+    .arrow{
+      img{
+        height: 200%;
+        width: 50%;
+        margin-top: -10px;
+      }
+    }
+  }
+  &.scroll{
+    .mouse{
+      opacity: 1;
+    }
+    .message{
+      .scroll{
+        opacity: 1;
+      }
+    }
+  }
+  &:hover{
+    .mouse{
+      .dot{
+        animation-duration: 3.5s;
+        animation-name: mouseWheelBounce;
+        animation-iteration-count: 2;
+      }
+    }
+  }
+}
+
+@keyframes mouseWheelBounce {
+  0% {
+    top:12px;
+  }
+  10% {
+    top: 18px;
+    opacity: 0.5;
+  }
+  20%{
+    top: 12px;
+    opacity: 1;
+  }
+  30% {
+    top: 16px;
+    opacity: 0.5;
+  }
+  40%{
+    top:12px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px){
+  body{
+    .case-study-container{
+      .case-study-content-wrapper{
+        width:100% !important;
+      }
+      .case-study-close-button{
+        position: fixed;
+        right:20px;
+        top:30px;
+      }
+    }
+    &.case-study-displayed{
+      .case-study-page-mask{
+        display: none !important;
+      }
+      .fixed-navigation{
+        display: none !important;
+      }
+      .case-study-container{
+        left:0 !important;
+        .case-study-close-arrow{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .case-study-container{
+    .case-study-close-button{
+      right:10px !important;
+      top:20px !important;
+    }
+  }
+  .fixed-navigation{
+    left: calc(100% - 40px) !important;
+    width:30px;
+    .right-side-menu-icon{
+      margin-top:10px !important;
+
+    }
+    .right-side-logo{
+      display: none;
+    }
+    .right-side-languages{
+      margin-top:20px !important;
+    }
+  }
+  .dynamic-menu{
+    &.displayed{
+      opacity: .95 !important;
+    }
+    .nav-wrap{
+      margin-top: 20% !important;
+      nav{
+        li{
+         // margin-left: 30px !important;
+        }
+      }
+      .hotlinks{
+        &.displayed{
+          transition: opacity 1s !important;
+        }
+      }
+    }
+  }
+}
