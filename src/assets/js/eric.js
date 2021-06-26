@@ -925,7 +925,7 @@ var EricPhelan = {
                 "tech":["node.js","HTML5/CSS3","AWS","jQuery","Angular","Photoshop","Illustrator"],
                 "introduction":{
                     "paragraphs":[
-                        "After leaving Springshot, I convinced my friend Jordan Lee to quite his job and join me in a new venture. "+
+                        "After leaving Springshot, I convinced my friend Jordan Lee to quit his job and join me in a new venture. "+
                         "We started with a collection of over 50 concepts, whittled the list down to 5 candidates, and finally decided to create Principly, a platform to make raising money for college easier.",
                         "The concept behind Principly was born of my personal experience paying for college. Average annual tuition in the United States for a 4-year private college can easily exceed $50,000. Principly "+
                         "is designed to help students overcome this burden by enrolling a network of 'backers' to contribute to a college fund in the form of a tax-free 529 savings account managed by Principly."
