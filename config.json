@@ -1,0 +1,15 @@
+
+{
+  "http_port" : 80,
+  "dbConnectionParams": {
+    "connectionLimit": 100,
+    "host" : "ericphelancomtracking.cfowo8r5ejlz.us-west-2.rds.amazonaws.com",
+    "user": "ephelan",
+    "password": "Rp3Riugh!",
+    "database": "ericPhelanCom",
+    "port": 3306,
+    "debug": []
+  }
+}
+
+
