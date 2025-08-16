@@ -6,10 +6,10 @@
   "author": "Eric Phelan",
   "license": "ISC",
   "scripts": {
-    "build": "pug src --out dist && sass src/assets/scss:dist/assets/css --style compressed && npm run build:js && npm run copy:images",
+    "build": "pug src --out dist && sass src/assets/scss:dist/assets/css --style compressed --load-path=src && npm run build:js && npm run copy:images",
     "build:js": "node build-js.js",
     "copy:images": "cp -r src/assets/img dist/assets/ 2>/dev/null || echo 'No images to copy'",
-    "build:watch": "pug src --out dist --watch & sass src/assets/scss:dist/assets/css --watch --style compressed",
+    "build:watch": "pug src --out dist --watch & sass src/assets/scss:dist/assets/css --watch --style compressed --load-path=src",
     "start": "node app.js",
     "dev": "npm run build && npm start"
   },
