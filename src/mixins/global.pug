@@ -1,0 +1,88 @@
+
+mixin fixedNavigation()
+    .fixed-navigation
+        .right-side-logo(onclick="Scrolling.advanceToNamedScene('home')")
+            .logo
+        .right-side-menu-icon.site-monitor-click(onclick="Menu.toggleDisplay()" data-track-target="Menu Icon")
+            .menu-trigger-line.top
+            .menu-trigger-line.middle
+            .menu-trigger-line.bottom
+        .right-side-languages
+            .language.en.site-monitor-click(onclick="DataText.setLanguage('en')" data-track-target="Language: EN") EN
+            .divider
+            .language.de.site-monitor-click(onclick="DataText.setLanguage('de')" data-track-target="Language: DE") DE
+        //.right-side-cv(href="assets/PhelanEric_CV.pdf" target="_blank")
+    .dynamic-menu
+        .nav-wrap
+            nav.nav
+                .nav-title Eric Phelan
+                li.menu-item.home.site-monitor-click(onclick="Scrolling.advanceToNamedScene('home')" data-text-io="nav:menu:home" data-track-target="Menu: Home")
+                li.menu-item.profile.site-monitor-click(onclick="Scrolling.advanceToNamedScene('profile')" data-text-io="nav:menu:about" data-track-target="Menu: About")
+                li.menu-item.work.site-monitor-click(onclick="Scrolling.advanceToNamedScene('work')" data-text-io="nav:menu:work" data-track-target="Menu: Work")
+                //li.menu-item.thoughts(data-text-io="nav:menu:blog")
+                li.menu-item.contact.site-monitor-click(onclick="Scrolling.advanceToNamedScene('contact')" data-text-io="nav:menu:contact" data-track-target="Menu: Contact")
+            .hotlinks
+                ul
+                    li
+                        a.site-monitor-click(href="https://www.facebook.com/epcphelan" target="_blank" data-track-target="Social Icon: Facebook")
+                            .icon.facebook
+                    li
+                        a.site-monitor-click(href="https://www.linkedin.com/in/epcphelan" target="_blank" data-track-target="Social Icon: LinkedIn")
+                            .icon.linkedin
+                    li
+                        a.site-monitor-click(href="http://instagram.com/epcphelan" target="_blank" data-track-target="Social Icon: Instagram")
+                            .icon.instagram
+                .clearfix
+                p
+                    .contact-option.site-monitor-click(data-track-target="Icon: Email" data-text-io="contact:email")
+                    br
+                    .contact-option.site-monitor-click(data-track-target="Icon: Phone" data-text-io="contact:phone")
+
+mixin fixedNavigationCases()
+    .fixed-navigation
+        .right-side-logo(onclick="window.location ='/#home';")
+            .logo
+        .right-side-menu-icon.site-monitor-click(onclick="Menu.toggleDisplay()" data-track-target="Menu Icon")
+            .menu-trigger-line.top
+            .menu-trigger-line.middle
+            .menu-trigger-line.bottom
+        .right-side-languages
+            .language.en.site-monitor-click(onclick="DataText.setLanguage('en')" data-track-target="Language: EN") EN
+            .divider
+            .language.de.site-monitor-click(onclick="DataText.setLanguage('de')" data-track-target="Language: DE") DE
+        //.right-side-cv(href="assets/PhelanEric_CV.pdf" target="_blank")
+    .dynamic-menu
+        .nav-wrap
+            nav.nav
+                .nav-title Eric Phelan
+                li.menu-item.home.site-monitor-click(onclick="window.location ='/#home';" data-text-io="nav:menu:home" data-track-target="Menu: Home")
+                li.menu-item.profile.site-monitor-click(onclick="window.location ='/#bio';" data-text-io="nav:menu:about" data-track-target="Menu: About")
+                li.menu-item.work.site-monitor-click(onclick="window.location ='/#work';" data-text-io="nav:menu:work" data-track-target="Menu: Work")
+                //li.menu-item.thoughts(data-text-io="nav:menu:blog")
+                li.menu-item.contact.site-monitor-click(onclick="window.location ='/#contact';" data-text-io="nav:menu:contact" data-track-target="Menu: Contact")
+            .hotlinks
+                ul
+                    li
+                        a.site-monitor-click(href="https://www.facebook.com/epcphelan" target="_blank" data-track-target="Social Icon: Facebook")
+                            .icon.facebook
+                    li
+                        a.site-monitor-click(href="https://www.linkedin.com/in/epcphelan" target="_blank" data-track-target="Social Icon: LinkedIn")
+                            .icon.linkedin
+                    li
+                        a.site-monitor-click(href="http://instagram.com/epcphelan" target="_blank" data-track-target="Social Icon: Instagram")
+                            .icon.instagram
+                .clearfix
+                p
+                    .contact-option.site-monitor-click(data-track-target="Icon: Email" data-text-io="contact:email")
+                    br
+                    .contact-option.site-monitor-click(data-track-target="Icon: Phone" data-text-io="contact:phone")
+
+
+mixin scrollHint()
+    .scroll-hint.displayed.faded.scroll(onclick="Scrolling.advanceToNamedScene('profile')")
+        .mouse
+            .dot
+        .message
+            .scroll scroll
+            .arrow
+                img(src="assets/img/down-arrow-arrow.png")

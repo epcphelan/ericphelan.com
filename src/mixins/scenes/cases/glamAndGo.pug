@@ -1,0 +1,205 @@
+mixin glamAndGoContent()
+    script(id="glam-and-go-case" type="text/template")
+        .case-study.glam-and-go.site-monitor-page(data-track-target="Glam&Go")
+            .full-page.media-player#dashboard-demo
+                .container
+                    .media-element
+                        video#glamandgo-dashboard-demo-video(controls=false)
+                            source(speed-boost-media sb-src-l="http://assets.ericphelan.com/media/GlamAndGoBusinessDashboard_large.mov" sb-src-m="http://assets.ericphelan.com/media/GlamAndGoBusinessDashboard_medium.mov" sb-src-s="http://assets.ericphelan.com/media/GlamAndGoBusinessDashboard_small.mov" type="video/mp4")
+            .full-page.media-player#dailypunch-demo
+                .container
+                    .media-element
+                        video#glamandgo-dailypunch-demo-video(controls=false)
+                            source(speed-boost-media sb-src-l="http://assets.ericphelan.com/media/GlamAndGoDailyPunch_large.mov" sb-src-m="http://assets.ericphelan.com/media/GlamAndGoDailyPunch_medium.mov" sb-src-s="http://assets.ericphelan.com/media/GlamAndGoDailyPunch_small.mov" type="video/mp4" )
+            .hero
+                .hint-header
+                    .number 01
+                    .label(data-text-io="cases:glamAndGo:superTitle")
+                .title(data-text-io="cases:glamAndGo:title")
+                .subtitle(data-text-io="cases:glamAndGo:subtitle")
+                img(src="assets/img/glam_and_go_hero_product.png")
+            .case-study-content
+                .introduction
+                    .left
+                        .summary-container
+                            .client-logo
+                                a(href="http://glamandgo.com" target="_blank")
+                                    img(src="assets/img/logos/glam_and_go_official.png")
+                            ul.details
+                                li
+                                    .label(data-text-io="cases:labels:role")
+                                    .value(data-text-io="cases:glamAndGo:role")
+                                li
+                                    .label(data-text-io="cases:labels:engagement")
+                                    .value(data-text-io="cases:glamAndGo:engagement")
+                                li
+                                    .label(data-text-io="cases:labels:funding")
+                                    .value
+                                        span(data-text-io="cases:glamAndGo:funding")
+                                        br
+                                        a(data-attr-io="href|cases:glamAndGo:vc:link" data-text-io="cases:glamAndGo:vc:label" target="_blank")
+                                li
+                                    .label(data-text-io="cases:labels:people")
+                                    .value
+                                        ul
+                                            li
+                                                a(data-attr-io="href|cases:glamAndGo:people:0:link" data-text-io="cases:glamAndGo:people:0:name" target="_blank")
+                                            li
+                                                a(data-attr-io="href|cases:glamAndGo:people:1:link" data-text-io="cases:glamAndGo:people:1:name" target="_blank")
+                                li
+                                    .label(data-text-io="cases:labels:tech")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:glamAndGo:tech:0")
+                                            li(data-text-io="cases:glamAndGo:tech:1")
+                                            li(data-text-io="cases:glamAndGo:tech:2")
+                                            li(data-text-io="cases:glamAndGo:tech:3")
+                                            li(data-text-io="cases:glamAndGo:tech:4")
+                                            li(data-text-io="cases:glamAndGo:tech:5")
+                                    .clearfix
+                                li
+                                    .label(data-text-io="cases:labels:integrations")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:glamAndGo:integrations:0")
+                                            li(data-text-io="cases:glamAndGo:integrations:1")
+                                            li(data-text-io="cases:glamAndGo:integrations:2")
+                                            li(data-text-io="cases:glamAndGo:integrations:3")
+                                            li(data-text-io="cases:glamAndGo:integrations:4")
+                                    .clearfix
+
+                    .right
+                        .intro-text
+                            h4(data-text-io="cases:labels:introduction")
+                            .scroll-effect.in-up
+                                p(data-text-io="cases:glamAndGo:introduction:paragraphs:0")
+                                p(data-text-io="cases:glamAndGo:introduction:paragraphs:1")
+                                p(data-text-io="cases:glamAndGo:introduction:paragraphs:2")
+                        .contributions.scroll-effect.in-up
+                            h4(data-text-io="cases:labels:contributions")
+                            ul
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:0")
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:1")
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:2")
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:3")
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:4")
+                                li
+                                    .name(data-text-io="cases:glamAndGo:contributions:5")
+                        p.note
+                            strong(data-text-io="cases:labels:note")
+                            nbsp
+                            span(data-text-io="cases:glamAndGo:note")
+                    .clearfix
+                .case-study-body
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:glamAndGo:sections:0:heading")
+                        h5(data-text-io="cases:glamAndGo:sections:0:subheading")
+                        .left.scroll-effect.in-left
+                            p.padding-20(data-text-io="cases:glamAndGo:sections:0:paragraphs:0")
+                        .right.scroll-effect.in-right
+                            .deep-dive
+                                .detail
+                                    h4(data-text-io="cases:glamAndGo:deepDive:heading")
+                                    p(data-text-io="cases:glamAndGo:deepDive:text")
+                                .visual.download
+                                    .preview-image
+                                        img(src="assets/img/excel-icon.png")
+                                    a(href="http://assets.ericphelan.com/media/GlamAndGo_Models_Sample.xlsx" target="_blank" data-text-io="cases:glamAndGo:deepDive:file")
+                                .clearfix
+                        .clearfix
+
+                    .section.color-fill.business-dashboard.gray.scroll-effect.in-up
+                        .container
+                            h4(data-text-io="cases:glamAndGo:sections:1:heading")
+                            .blurb.left
+                                p.scroll-effect.in-left(data-text-io="cases:glamAndGo:sections:1:paragraphs:0")
+                                p.scroll-effect.in-left(data-text-io="cases:glamAndGo:sections:1:paragraphs:1")
+                            .macbook-interactive.right
+                                .expander.dashboard-demo-expander.site-monitor-click(data-track-target="Expand: Business Dashboard")
+                                .stretch-wrap-container.dashboard-demo-expander.site-monitor-click(data-track-target="Expand: Business Dashboard")
+                                    .stretch-content-container.macbook-wire-bg
+                                        video(loop autoplay)
+                                            source(src="http://assets.ericphelan.com/media/GlamAndGoBusinessDashboard_small.mov" type="video/mp4" )
+                                    img(src="assets/img/macbook-frame-stretch-bg-normal.png")
+
+                            .clearfix
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:glamAndGo:sections:2:heading")
+                        h5(data-text-io="cases:glamAndGo:sections:2:subheading")
+                        p(data-text-io="cases:glamAndGo:sections:2:paragraphs:0")
+                        p(data-text-io="cases:glamAndGo:sections:2:paragraphs:1")
+                    .section.color-fill.customer-support-dashboard.blue.scroll-effect.in-up
+                        .container
+                            h4(data-text-io="cases:glamAndGo:sections:3:heading")
+                            .imac-interactive.left
+                                .stretch-wrap-container.dailypunch-demo-expander.site-monitor-click(data-track-target="Expand: Daily Punch")
+                                    .stretch-content-container.imac-wire-bg
+                                        video(loop autoplay)
+                                            source(src="http://assets.ericphelan.com/media/GlamAndGoDailyPunch_small.mov" type="video/mp4" )
+                                    img(src="assets/img/imac-frame-stretch-bg-normal.png")
+                                .expander.dailypunch-demo-expander.site-monitor-click(data-track-target="Expand: Daily Punch")
+                            .blurb.right
+                                p.scroll-effect.in-right(data-text-io="cases:glamAndGo:sections:3:paragraphs:0")
+                                p.scroll-effect.in-right(data-text-io="cases:glamAndGo:sections:3:paragraphs:1")
+                                p.scroll-effect.in-right(data-text-io="cases:glamAndGo:sections:3:paragraphs:2")
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:glamAndGo:sections:4:heading")
+                        p(data-text-io="cases:glamAndGo:sections:4:paragraphs:0")
+                        .line
+                        p
+                            strong(data-text-io="cases:glamAndGo:sections:4:subheading")
+
+                        ul.two-columns
+                            li
+                                .title(data-text-io="cases:glamAndGo:sections:4:features:0:title")
+                                .detail(data-text-io="cases:glamAndGo:sections:4:features:0:detail")
+                            li
+                                .title(data-text-io="cases:glamAndGo:sections:4:features:1:title")
+                                .detail(data-text-io="cases:glamAndGo:sections:4:features:1:detail")
+                            li
+                                .title(data-text-io="cases:glamAndGo:sections:4:features:2:title")
+                                .detail(data-text-io="cases:glamAndGo:sections:4:features:2:detail")
+                            li
+                                .title(data-text-io="cases:glamAndGo:sections:4:features:3:title")
+                                .detail(data-text-io="cases:glamAndGo:sections:4:features:3:detail")
+                            li
+                                .title(data-text-io="cases:glamAndGo:sections:4:features:4:title")
+                                .detail(data-text-io="cases:glamAndGo:sections:4:features:4:detail")
+                        .demo.image-switch
+                            .stretch-wrap-container
+                                .stretch-content-container.macbook-real-bg.interactive-container
+                                    .slide-panel
+                                        img.active(src="assets/img/glamandgo/demo_1.jpg" data-attr-io="description|cases:glamAndGo:sections:4:captions:0")
+                                        img(src="assets/img/glamandgo/demo_2.jpg" data-attr-io="description|cases:glamAndGo:sections:4:captions:1")
+                                        img(src="assets/img/glamandgo/demo_3.jpg" data-attr-io="description|cases:glamAndGo:sections:4:captions:2")
+                                        img(src="assets/img/glamandgo/demo_4.jpg" data-attr-io="description|cases:glamAndGo:sections:4:captions:3")
+                                        img(src="assets/img/glamandgo/demo_5.jpg" data-attr-io="description|cases:glamAndGo:sections:4:captions:4")
+                                img(src="assets/img/macbook-background-normal.jpg")
+                        .testimonial.scroll-effect.in-up
+                            .quote(data-text-io="cases:glamAndGo:sections:4:testimonial:quote")
+                            .attribution
+                                .photo
+                                    img(src="assets/img/esw.jpg")
+                                .name(data-text-io="cases:glamAndGo:sections:4:testimonial:author")
+                    .section.summary.scroll-effect.in-up
+                        h4(data-text-io="cases:glamAndGo:sections:5:heading")
+                        p(data-text-io="cases:glamAndGo:sections:5:paragraphs:0")
+                    .footer
+                        .container
+                            .left.news-container
+                                h4(data-text-io="cases:labels:news")
+                                ul.news
+                                    li
+                                        a(data-attr-io="href|cases:glamAndGO:news:0:link" data-text-io="cases:glamAndGo:news:0:title")
+                                    li
+                                        a(data-attr-io="href|cases:glamAndGO:news:1:link" data-text-io="cases:glamAndGo:news:1:title")
+                            .right.next-container
+                                .next-project
+                                    .label  NEXT
+                                        img(src="assets/img/right_arrow.png")
+

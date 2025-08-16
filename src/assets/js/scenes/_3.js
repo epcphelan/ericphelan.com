@@ -13,47 +13,47 @@ SceneController.prototype.scenes3 = function(){
     var subSceneInPreCallbacks ={};
     var subSceneOutPreCallbacks ={};
     var flipBoxImgArray_3c = [
-        'http://assets.ericphelan.com/img/flipboards/1.jpg',
-        'http://assets.ericphelan.com/img/flipboards/2.jpg',
-        'http://assets.ericphelan.com/img/flipboards/3.jpg',
-        'http://assets.ericphelan.com/img/flipboards/4.jpg',
-        'http://assets.ericphelan.com/img/flipboards/5.jpg',
-        'http://assets.ericphelan.com/img/flipboards/6.jpg',
-        'http://assets.ericphelan.com/img/flipboards/7.jpg',
-        'http://assets.ericphelan.com/img/flipboards/8.jpg',
-        'http://assets.ericphelan.com/img/flipboards/9.jpg',
-        'http://assets.ericphelan.com/img/flipboards/10.jpg',
-        'http://assets.ericphelan.com/img/flipboards/11.jpg',
-        'http://assets.ericphelan.com/img/flipboards/12.jpg',
-        'http://assets.ericphelan.com/img/flipboards/13.jpg',
-        'http://assets.ericphelan.com/img/flipboards/14.jpg',
-        'http://assets.ericphelan.com/img/flipboards/15.jpg',
-        'http://assets.ericphelan.com/img/flipboards/16.jpg',
-        'http://assets.ericphelan.com/img/flipboards/17.jpg',
-        'http://assets.ericphelan.com/img/flipboards/18.jpg',
-        'http://assets.ericphelan.com/img/flipboards/19.jpg',
-        'http://assets.ericphelan.com/img/flipboards/20.jpg',
-        'http://assets.ericphelan.com/img/flipboards/21.jpg',
-        'http://assets.ericphelan.com/img/flipboards/22.jpg',
-        'http://assets.ericphelan.com/img/flipboards/23.jpg'
+        'assets/img/flipboards/1.jpg',
+        'assets/img/flipboards/2.jpg',
+        'assets/img/flipboards/3.jpg',
+        'assets/img/flipboards/4.jpg',
+        'assets/img/flipboards/5.jpg',
+        'assets/img/flipboards/6.jpg',
+        'assets/img/flipboards/7.jpg',
+        'assets/img/flipboards/8.jpg',
+        'assets/img/flipboards/9.jpg',
+        'assets/img/flipboards/10.jpg',
+        'assets/img/flipboards/11.jpg',
+        'assets/img/flipboards/12.jpg',
+        'assets/img/flipboards/13.jpg',
+        'assets/img/flipboards/14.jpg',
+        'assets/img/flipboards/15.jpg',
+        'assets/img/flipboards/16.jpg',
+        'assets/img/flipboards/17.jpg',
+        'assets/img/flipboards/18.jpg',
+        'assets/img/flipboards/19.jpg',
+        'assets/img/flipboards/20.jpg',
+        'assets/img/flipboards/21.jpg',
+        'assets/img/flipboards/22.jpg',
+        'assets/img/flipboards/23.jpg'
     ];
     var flipBoxImgFinalArray_3c = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,1,2,3,4,5,6,7,8,9,10];
     var flipBoxes_3c = [];
     var _3bTilters = null;
     var flipBoxImgArray_3i = [
-        'http://assets.ericphelan.com/img/flipboards/stock/1.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/2.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/3.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/4.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/5.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/6.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/7.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/8.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/9.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/10.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/11.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/12.png',
-        'http://assets.ericphelan.com/img/flipboards/stock/13.png'
+        'assets/img/flipboards/stock/1.png',
+        'assets/img/flipboards/stock/2.png',
+        'assets/img/flipboards/stock/3.png',
+        'assets/img/flipboards/stock/4.png',
+        'assets/img/flipboards/stock/5.png',
+        'assets/img/flipboards/stock/6.png',
+        'assets/img/flipboards/stock/7.png',
+        'assets/img/flipboards/stock/8.png',
+        'assets/img/flipboards/stock/9.png',
+        'assets/img/flipboards/stock/10.png',
+        'assets/img/flipboards/stock/11.png',
+        'assets/img/flipboards/stock/12.png',
+        'assets/img/flipboards/stock/13.png'
     ];
     var flipBoxes_3i = [];
     var shootingStar = null;

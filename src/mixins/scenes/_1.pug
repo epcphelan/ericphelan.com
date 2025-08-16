@@ -1,0 +1,13 @@
+mixin scene_1
+    #scene-1.slide-container
+        .background
+            video(playsinline muted loop poster="assets/img/home_video_large.jpg" id="home_bg_video")
+                source(speed-boost-media sb-src-l="http://assets.ericphelan.com/media/home_video_large.mp4" sb-src-m="http://assets.ericphelan.com/media/home_video_medium.mp4" sb-src-s="http://assets.ericphelan.com/media/home_video_medium.mp4" type="video/mp4")
+                img(sb-src-l="assets/img/home_video_large.jpg" sb-src-m="assets/img/home_video_medium.jpg" sb-src-s="assets/img/home_video_small.jpg")
+        .canvas
+            .wrap
+                .title(data-text-io = "home:intro")
+                .motto(data-text-io = "home:motto")
+            .down-arrow-circle(onclick="Scrolling.advanceToNamedScene('profile')")
+                img.circle(src="assets/img/down-arrow-circle.png")
+                img.arrow(src="assets/img/down-arrow-arrow.png")

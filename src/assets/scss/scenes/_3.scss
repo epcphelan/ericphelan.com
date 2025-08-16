@@ -145,11 +145,11 @@
       height:10px;
       width: 12px;
       display: inline-block;
-      background-image: url("http://assets.ericphelan.com/img/pointer-right.png");
+      background-image: url("assets/img/pointer-right.png");
       background-size: contain;
       background-repeat: no-repeat;
       &.red{
-        background-image: url("http://assets.ericphelan.com/img/pointer-right-red.png");
+        background-image: url("assets/img/pointer-right-red.png");
       }
     }
   }
@@ -1213,7 +1213,7 @@
               }
               .zigzag{
                 margin: 10px 0 10px 0;
-                background-image: url("http://assets.ericphelan.com/img/zigzag.png");
+                background-image: url("assets/img/zigzag.png");
                 background-repeat: no-repeat;
                 height: 10px;
                 width:50px;
@@ -1499,7 +1499,7 @@
           }
           .mobile-close{
             display: none;
-            background: url(http://assets.ericphelan.com/img/down-arrow-arrow-dark.png);
+            background: url(assets/img/down-arrow-arrow-dark.png);
             background-size: cover;
 
             height: 40px;

@@ -1,0 +1,236 @@
+mixin springshot()
+    script(id="springshot-case" type="text/template")
+        .case-study.springshot.site-monitor-page(data-track-target="Springshot")
+            .full-page.media-player#springshot-demo
+                .container
+                    .media-element
+                        video#springshot-demo-video(controls=false)
+                            source(src="http://assets.ericphelan.com/media/springshot_intro_animation.mov" type="video/mp4" )
+                        .description(data-text-io="cases:springshot:video:heading")
+                        .subdetail(data-text-io="cases:springshot:video:subheading")
+                        .hint(data-text-io="nav:buttons:clickToCloseVideo")
+            .hero
+                .hint-header
+                    .number 05
+                    .label(data-text-io="cases:springshot:superTitle")
+                .title(data-text-io="cases:springshot:title")
+                .subtitle(data-text-io="cases:springshot:subtitle")
+                img(src="assets/img/springshot/springshot_product.png")
+            .case-study-content
+                .introduction
+                    .left
+                        .summary-container
+                            .client-logo
+                                a.site-monitor-click(href="http://springshot.com" target="_blank" data-track-target="Case Link: Springshot.com")
+                                    img(src="assets/img/logos/springshot_blue.png")
+                            ul.details
+                                li
+                                    .label(data-text-io="cases:labels:role")
+                                    .value(data-text-io="cases:springshot:role")
+                                li
+                                    .label(data-text-io="cases:labels:engagement")
+                                    .value(data-text-io="cases:springshot:engagement")
+                                li
+                                    .label(data-text-io="cases:labels:funding")
+                                    .value
+                                        span(data-text-io="cases:springshot:funding")
+                                        br
+                                        a(data-attr-io="href|cases:springshot:vc:link" data-text-io="cases:springshot:vc:label")
+                                li
+                                    .label(data-text-io="cases:labels:people")
+                                    .value
+                                        ul
+                                            li
+                                                a.site-monitor-click(data-attr-io="href|cases:springshot:people:0:link" data-text-io="cases:springshot:people:0:name" data-track-target="Case Link: Doug Kreuzkamp")
+                                            li
+                                                a.site-monitor-click(data-attr-io="href|cases:springshot:people:1:link" data-text-io="cases:springshot:people:1:name" data-track-target="Case Link: Adam DeVito")
+                                li
+                                    .label(data-text-io="cases:labels:tech")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:springshot:tech:0")
+                                            li(data-text-io="cases:springshot:tech:1")
+                                            li(data-text-io="cases:springshot:tech:2")
+                                            li(data-text-io="cases:springshot:tech:3")
+                                            li(data-text-io="cases:springshot:tech:4")
+                                            li(data-text-io="cases:springshot:tech:5")
+                                            li(data-text-io="cases:springshot:tech:6")
+                                            li(data-text-io="cases:springshot:tech:7")
+                                            li(data-text-io="cases:springshot:tech:8")
+                                            li(data-text-io="cases:springshot:tech:9")
+                                            li(data-text-io="cases:springshot:tech:10")
+                                            li(data-text-io="cases:springshot:tech:11")
+                                    .clearfix
+                                li
+                                    .label(data-text-io="cases:labels:integrations")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:springshot:integrations:0")
+                                            li(data-text-io="cases:springshot:integrations:1")
+                                            li(data-text-io="cases:springshot:integrations:2")
+                                    .clearfix
+                    .right
+                        .intro-text
+                            h4(data-text-io="cases:labels:introduction")
+                            p(data-text-io="cases:springshot:introduction:paragraphs:0")
+                            p(data-text-io="cases:springshot:introduction:paragraphs:1")
+                            p(data-text-io="cases:springshot:introduction:paragraphs:2")
+                        .contributions.scroll-effect.in-up
+                            h4(data-text-io="cases:labels:contributions")
+                            ul.scroll-effect.in-up
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:0")
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:1")
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:2")
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:3")
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:4")
+                                li
+                                    .name(data-text-io="cases:springshot:contributions:5")
+                    .clearfix
+                .case-study-body
+                    .section
+                        h4(data-text-io="cases:springshot:sections:0:heading")
+                        h5(data-text-io="cases:springshot:sections:0:subheading")
+                        .left.scroll-effect.in-left
+                            p.padding-20(data-text-io="cases:springshot:sections:0:paragraphs:0")
+                        .right.scroll-effect.in-right
+                            .deep-dive
+                                .detail
+                                    h4(data-text-io="cases:springshot:sections:0:deepDive:heading")
+                                    p(data-text-io="cases:springshot:sections:0:deepDive:text")
+                                .visual.download
+                                    .preview-image
+                                        img(src="assets/img/patent_icon.png")
+                                    a.site-monitor-click(href="https://www.google.com/patents/US20140278638" target="_blank" data-text-io="cases:springshot:sections:0:deepDive:file" data-track-target="Case Link: Patent Application")
+                                .clearfix
+                        .clearfix
+
+                    .section.color-fill.business-dashboard.gray
+                        .container.scroll-effect.in-up
+                            h4(data-text-io="cases:springshot:sections:1:heading")
+                            .blurb.left.scroll-effect.in-left
+                                p
+                                    strong(data-text-io="cases:springshot:sections:1:features:heading")
+                                ul
+                                    li(data-text-io="cases:springshot:sections:1:features:list:0")
+                                    li(data-text-io="cases:springshot:sections:1:features:list:1")
+                                    li(data-text-io="cases:springshot:sections:1:features:list:2")
+                                    li(data-text-io="cases:springshot:sections:1:features:list:3")
+                                p
+                                    strong(data-text-io="cases:springshot:sections:1:specs:heading")
+                                ul
+                                    li(data-text-io="cases:springshot:sections:1:specs:list:0")
+                                    li(data-text-io="cases:springshot:sections:1:specs:list:1")
+                                    li(data-text-io="cases:springshot:sections:1:specs:list:2")
+                            .blurb.right.scroll-effect.in-right
+                                .springshot-demo-video
+                                    .stretch-wrap-container
+                                        .stretch-content-container.imac-wire-bg.springshot-demo-play
+                                            img.play-button.site-monitor-click(src="assets/img/springshot/demo_reel_play.png" data-track-target="Video: Springshot Animation")
+                                        img(src="assets/img/imac-frame-stretch-bg-normal.png")
+                            .clearfix
+                    .section
+                        h4(data-text-io="cases:springshot:sections:2:heading")
+                        .line
+                        .clearfix
+                        .blurb.left
+                            h4(data-text-io="cases:springshot:sections:2:subsections:0:heading")
+                            p(data-text-io="cases:springshot:sections:2:subsections:0:text")
+                        .blurb.right
+                            h4(data-text-io="cases:springshot:sections:2:subsections:1:heading")
+                            p(data-text-io="cases:springshot:sections:2:subsections:1:text")
+                            a.site-monitor-click(href="https://www.sec.gov/Archives/edgar/data/1578691/000157869113000001/xslFormDX01/primary_doc.xml" target="_blank" data-text-io="cases:springshot:sections:2:subsections:1:filing" data-track-target="Case Link: Form D")
+
+                        .clearfix
+                    .image-carousel
+                        ul
+                            li.scroll-effect.light-up
+                                img(src="assets/img/springshot/history_1.jpg")
+                            li.scroll-effect.light-up
+                                img(src="assets/img/springshot/history_2.jpg")
+                            li.scroll-effect.light-up
+                                img(src="assets/img/springshot/history_3.jpg")
+                            li.scroll-effect.light-up
+                                img(src="assets/img/springshot/history_4.jpg")
+                    .section.color-fill.customer-support-dashboard.blue
+                        .container
+                            h4(data-text-io="cases:springshot:sections:3:heading")
+                            .center
+                                p(data-text-io="cases:springshot:sections:3:paragraphs:0")
+                                p(data-text-io="cases:springshot:sections:3:paragraphs:1")
+                    .section.scroll-images
+                        .container
+                            ul.scroll-effect.in-left
+                                li.up
+                                    img(src="assets/img/springshot/carousel_1.png")
+                                li.middle
+                                    img(src="assets/img/springshot/carousel_2.png")
+                                li.down
+                                    img(src="assets/img/springshot/carousel_3.png")
+                                li.middle
+                                    img(src="assets/img/springshot/carousel_4.png")
+                                li.up
+                                    img(src="assets/img/springshot/carousel_5.png")
+                                li.down
+                                    img(src="assets/img/springshot/carousel_6.png")
+                                li.middle
+                                    img(src="assets/img/springshot/carousel_1.png")
+                                li.up
+                                    img(src="assets/img/springshot/carousel_2.png")
+                            .clearfix
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:springshot:sections:4:heading")
+                        p(data-text-io="cases:springshot:sections:4:paragraphs:0")
+                        ul.two-columns
+                            li
+                                .contain
+                                    .title(data-text-io="cases:springshot:sections:4:highlights:0:title")
+                                    .detail
+                                        p(data-text-io="cases:springshot:sections:4:highlights:0:detail")
+                            li
+                                .contain
+                                    .title(data-text-io="cases:springshot:sections:4:highlights:1:title")
+                                    .detail
+                                        p(data-text-io="cases:springshot:sections:4:highlights:1:detail")
+                            li
+                                .contain
+                                    .title(data-text-io="cases:springshot:sections:4:highlights:2:title")
+                                    .detail
+                                        p(data-text-io="cases:springshot:sections:4:highlights:2:detail")
+                            li
+                                .contain
+                                    .title(data-text-io="cases:springshot:sections:4:highlights:3:title")
+                                    .detail
+                                        p(data-text-io="cases:springshot:sections:4:highlights:3:detail")
+
+                        .demo.image-switch
+                            .stretch-wrap-container
+                                .stretch-content-container.macbook-real-bg-wide.interactive-container
+                                    .slide-panel
+                                        img.active(src="assets/img/springshot/springshot_demo_1.jpg" data-attr-io="description|cases:springshot:sections:4:captions:0")
+                                        img(src="assets/img/springshot/springshot_demo_2.jpg" data-attr-io="description|cases:springshot:sections:4:captions:1")
+                                        img(src="assets/img/springshot/springshot_demo_3.jpg" data-attr-io="description|cases:springshot:sections:4:captions:2")
+                                        img(src="assets/img/springshot/springshot_demo_4.jpg" data-attr-io="description|cases:springshot:sections:4:captions:3")
+                                img(src="assets/img/background-macbook.jpg")
+
+                    .section.summary
+                        h4(data-text-io="cases:springshot:sections:5:heading")
+                        p(data-text-io="cases:springshot:sections:5:paragraphs:0")
+                    .footer
+                        .container
+                            .left.news-container
+                                h4(data-text-io="cases:labels:news")
+                                ul.news
+                                    li
+                                        a.site-monitor-click(data-attr-io="href|cases:springshot:news:0:link" data-text-io="cases:springshot:news:0:title" data-track-target="Case Link: News Link 1")
+                                    li
+                                        a.site-monitor-click(data-attr-io="href|cases:springshot:news:1:link" data-text-io="cases:springshot:news:1:title" data-track-target="Case Link: News Link 2")
+                            .right.next-container
+                                .next-project.site-monitor-click(data-track-target="Case Next")
+                                    .label  NEXT
+                                        img(src="assets/img/right_arrow.png")
+

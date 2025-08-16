@@ -7,13 +7,13 @@ var Cases = null,
     SiteTracking = null;
 
 function PageLoad(){
-    var styles = 'http://assets.ericphelan.com/css/styles.css';
+    var styles = 'assets/css/styles.css';
     var bodyContent ='contents';
     var javaScripts = [
-        'http://assets.ericphelan.com/js/plugins-min.js',
-        'http://assets.ericphelan.com/js/eric-min.js',
-        'http://assets.ericphelan.com/js/libs-min.js',
-        'http://assets.ericphelan.com/js/scenes-min.js'
+        'assets/js/plugins-min.js',
+        'assets/js/eric-min.js',
+        'assets/js/libs-min.js',
+        'assets/js/scenes-min.js'
     ];
     var stylesLoaded = false;
     var scriptsLoaded = false;

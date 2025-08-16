@@ -1,0 +1,60 @@
+
+mixin scene_4
+    #scene-4.slide-container
+        .background
+        .canvas
+            .top
+                .map
+                .title(data-text-io="contact:title")
+            .bottom
+                .content-left
+                    .wrap
+                        h4(data-text-io="contact:heading")
+                        p(data-text-io="contact:details:0")
+                        p(data-text-io="contact:details:1")
+                        .call-to-action(data-text-io="contact:details:2")
+                        //.coffee
+                .content-middle
+                    .contact-phone
+                        .contact-form
+                            .loading-mask
+                                .apple-logo
+                                    img(src="assets/img/apple.png")
+                            .sending-mask
+                                .spinner
+                                    img(src="assets/img/loading-apple.gif")
+                            .success-background
+                                .message
+                                    h4(data-text-io="contact:form:success:heading")
+                                    h5(data-text-io="contact:form:success:subheading")
+                            .failure-background
+                                .message
+                                    h4(data-text-io="contact:form:failure:heading")
+                                    h5(data-text-io="contact:form:failure:subheading")
+                            .form-container
+                                form(onsubmit="return false;" autocomplete="off")
+                                    input#contact-name(type="text" data-attr-io="placeholder|contact:form:name")
+                                    input#contact-email(type="text" data-attr-io="placeholder|contact:form:email")
+                                    textarea#contact-message(data-attr-io="placeholder|contact:form:message")
+                                    button.send-button(data-text-io="contact:form:send")
+                .content-right
+                    .wrap
+                        h4(data-text-io="contact:methods:heading")
+                        p(data-text-io="contact:methods:details")
+                        .social-media
+                            ul
+                                li
+                                    a.site-monitor-click(href="https://www.facebook.com/epcphelan" target="_blank" data-track-target="Social: Facebook")
+                                        .icon.facebook
+                                li
+                                    a.site-monitor-click(href="https://www.linkedin.com/in/epcphelan" target="_blank" data-track-target="Social: LinkedIn")
+                                        .icon.linkedin
+                                li
+                                    a.site-monitor-click(href="http://instagram.com/epcphelan" target="_blank" data-track-target="Social: Instagram")
+                                        .icon.instagram
+                            .clearfix
+                        .email
+                            .site-monitor-click(src="assets/img/email.svg" data-track-target="Copy: Email" data-text-io="contact:email")
+                        .phone
+                            .site-monitor-click(src="assets/img/phone.svg" data-track-target="Copy: Phone" data-text-io="contact:phone")
+

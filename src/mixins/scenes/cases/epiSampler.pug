@@ -1,0 +1,146 @@
+mixin epiSampler()
+    script(id="episampler-case" type="text/template")
+        .case-study.episampler.site-monitor-page(data-track-target="epiSampler")
+            .hero
+                .hint-header
+                    .number 07
+                    .label(data-text-io="cases:epiSampler:superTitle")
+                .title(data-text-io="cases:epiSampler:title")
+                .subtitle(data-text-io="cases:epiSampler:subtitle")
+                img(src="assets/img/episampler/barcode.png")
+            .case-study-content
+                .introduction
+                    .left
+                        .summary-container
+                            .client-logo
+                                a.site-monitor-click(href="http://episampler.com" target="_blank" data-track-target="Case Link: episampler.com")
+                                    img(src="assets/img/logos/episampler.jpg")
+                            ul.details
+                                li
+                                    .label(data-text-io="cases:labels:role")
+                                    .value(data-text-io="cases:epiSampler:role")
+                                li
+                                    .label(data-text-io="cases:labels:engagement")
+                                    .value(data-text-io="cases:epiSampler:engagement")
+                                li
+                                    .label(data-text-io="cases:labels:funding")
+                                    .value(data-text-io="cases:epiSampler:funding")
+                                li
+                                    .label(data-text-io="cases:labels:partners")
+                                    .value
+                                        ul
+                                            li(data-text-io="cases:epiSampler:partners:0")
+                                            li(data-text-io="cases:epiSampler:partners:1")
+                                            li(data-text-io="cases:epiSampler:partners:2")
+                                            li(data-text-io="cases:epiSampler:partners:3")
+                                li
+                                    .label(data-text-io="cases:labels:tech")
+                                    .value
+                                        ul.tags
+                                            li(data-text-io="cases:epiSampler:tech:0")
+                                            li(data-text-io="cases:epiSampler:tech:1")
+                                            li(data-text-io="cases:epiSampler:tech:2")
+                                            li(data-text-io="cases:epiSampler:tech:3")
+                                    .clearfix
+
+                    .right
+                        .intro-text
+                            h4(data-text-io="cases:labels:introduction")
+                            p(data-text-io="cases:epiSampler:introduction:paragraphs:0")
+                            p(data-text-io="cases:epiSampler:introduction:paragraphs:1")
+                        .contributions.scroll-effect.in-up
+                            h4(data-text-io="cases:labels:contributions")
+                            ul
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:0")
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:1")
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:2")
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:3")
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:4")
+                                li
+                                    .name(data-text-io="cases:epiSampler:contributions:5")
+                .clearfix
+                .case-study-body
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:epiSampler:sections:0:heading")
+                        h5(data-text-io="cases:epiSampler:sections:0:subheading")
+                        .left.scroll-effect.in-left
+                            p.padding-20(data-text-io="cases:epiSampler:sections:0:paragraphs:0")
+                        .right.scroll-effect.in-right
+                            .deep-dive
+                                .detail
+                                    h4(data-text-io="cases:epiSampler:sections:0:deepDive:heading")
+                                    p(data-text-io="cases:epiSampler:sections:0:deepDive:text")
+                                .visual.download
+                                    .preview-image
+                                        img(src="assets/img/episampler/presentation.png")
+                                    a.site-monitor-click(href="http://assets.ericphelan.com/media/ISTHepiPresentation.pdf" target="_blank" data-text-io="cases:epiSampler:sections:0:deepDive:files:0" data-track-target="Case Download: ISTH Presentation")
+                                    br
+                                    a.site-monitor-click(href="http://assets.ericphelan.com/media/epiSamplerDataPolicy.pdf" target="_blank" data-text-io="cases:epiSampler:sections:0:deepDive:files:1" data-track-target="Case Download: Data Policy")
+                                .clearfix
+                        .clearfix
+                    .section.color-fill.business-dashboard.black
+                        .container.scroll-effect.in-up
+                            h4(data-text-io="cases:epiSampler:sections:1:heading")
+                            h5(data-text-io="cases:epiSampler:sections:1:subheading")
+                            .blurb.center
+                                p(data-text-io="cases:epiSampler:sections:1:paragraphs:0")
+                                p
+                                    strong(data-text-io="cases:epiSampler:sections:1:features:heading")
+                                ul
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:0")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:1")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:2")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:3")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:4")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:5")
+                                    li(data-text-io="cases:epiSampler:sections:1:features:list:6")
+                            .demo.image-switch
+                                .stretch-wrap-container
+                                    .stretch-content-container.macbook-wire-bg.interactive-container
+                                        .slide-panel
+                                            img.active(src="assets/img/episampler/episampler_demo_0.jpg" data-attr-io="description|cases:epiSampler:sections:1:captions:0")
+                                            img(src="assets/img/episampler/episampler_demo_1.jpg" data-attr-io="description|cases:epiSampler:sections:1:captions:1")
+                                            img(src="assets/img/episampler/episampler_demo_2.jpg" data-attr-io="description|cases:epiSampler:sections:1:captions:2")
+                                            img(src="assets/img/episampler/episampler_demo_3.jpg" data-attr-io="description|cases:epiSampler:sections:1:captions:3")
+                                            img(src="assets/img/episampler/episampler_demo_4.jpg" data-attr-io="description|cases:epiSampler:sections:1:captions:4")
+                                    img(src="assets/img/macbook-frame-stretch-bg-normal.png")
+                            .clearfix
+                    .section.scroll-effect.in-up
+                        h4(data-text-io="cases:epiSampler:sections:2:heading")
+                        h5(data-text-io="cases:epiSampler:sections:2:subheading")
+                        .blurb.left.scroll-effect.in-left
+                            p(data-text-io="cases:epiSampler:sections:2:paragraphs:0")
+                            p(data-text-io="cases:epiSampler:sections:2:paragraphs:1")
+                        .blurb.right.scroll-effect.in-right
+                            img(src="assets/img/episampler/user-guide.png")
+                            br
+                            a.site-monitor-click(href="http://assets.ericphelan.com/media/epiSamplerUserManual.pdf" target="_blank" data-text-io="cases:epiSampler:sections:2:file" data-track-target="Case Download: User Guide")
+                        .clearfix
+                        .line
+                        .film-reel
+                            ul
+                                li
+                                    .film.site-monitor-click(data-track-target="Video: Tutorial 1")
+                                        iframe(src="https://www.youtube.com/embed/EB4GZZX39ZU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen)
+                                    .title(data-text-io="cases:epiSampler:sections:2:captions:0:title")
+                                    .description(data-text-io="cases:epiSampler:sections:2:captions:0:desc")
+                                li
+                                    .film.site-monitor-click(data-track-target="Video: Tutorial 2")
+                                        iframe(src="https://www.youtube.com/embed/5wiQDqR5gUI?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen)
+                                    .title(data-text-io="cases:epiSampler:sections:2:captions:1:title")
+                                    .description(data-text-io="cases:epiSampler:sections:2:captions:1:desc")
+                    .section.summary.scroll-effect.in-up
+                        h4(data-text-io="cases:epiSampler:sections:3:heading")
+                        p(data-text-io="cases:epiSampler:sections:3:paragraphs:0")
+                    .footer
+                        .container
+                            .right.next-container
+                                .next-project
+                                    .label.site-monitor-click(data-track-target="Case Next")  NEXT
+                                        img(src="assets/img/right_arrow.png")
+

@@ -1,6 +1,6 @@
 
 {
-  "http_port" : 80,
+  "http_port" : 3000,
   "dbConnectionParams": {
     "connectionLimit": 100,
     "host" : "ericphelancomtracking.cfowo8r5ejlz.us-west-2.rds.amazonaws.com",

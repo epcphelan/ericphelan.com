@@ -1,0 +1,12 @@
+include mixins/global.pug
+include mixins/scenes/_1.pug
+include mixins/scenes/_2.pug
+include mixins/scenes/_3.pug
+include mixins/scenes/_4.pug
+
+.slide-deck
+    +scene_1()
+    +scene_2()
+    +scene_3()
+    +scene_4()
++fixedNavigation()
