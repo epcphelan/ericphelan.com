@@ -120,7 +120,7 @@ mainJsFiles.forEach(({ src, dest }) => {
 // Build lib JS files
 const libJsFiles = [
     'caseStudy.js', 'caseLoadingFunctions.js', 'caseScroll.js', 'cases.js', 'cvDisplay.js',
-    'dataTextIO.js', 'fingerprint2.js', 'flipBoard.js', 'flipSquare.js', 'floatingHero.js',
+    'dataTextIO.js', 'flipBoard.js', 'flipSquare.js', 'floatingHero.js',
     'glitch.js', 'menu.js', 'peekABooTwo.js', 'photoMorph.js', 'scrollHint.js',
     'scrollPlayer.js', 'shootingStar.js', 'siteTracking.js', 'speedBoost.js',
     'terminalTypeout.js', 'unfoldingCards.js', 'bloomingSkills.js'

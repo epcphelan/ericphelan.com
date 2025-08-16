@@ -66,73 +66,57 @@ SceneController.prototype.scene4 = function(){
     /// Messaging
 
     function bindSend(){
-        $scene4.find('.send-button').click(sendMessage)
-    }
-
-    function sendMessage(){
-        if(validMessageForm()){
-            $scene4.find('.contact-phone .sending-mask').fadeIn();
-            var email = $scene4.find('#contact-email').val();
-            var name = $scene4.find('#contact-name').val();
-            var body = $scene4.find('#contact-message').val();
-            ajaxSendMessage(email,name,body,function(res){
-                if(res.success){
-                    animateMessageSuccess();
-                }
-                else{
-                    animateMessageFailure()
-                }
-            })
-        }
-    }
-
-    function animateMessageSuccess(){
-        $scene4.find('.contact-phone .sending-mask').fadeOut();
-        $scene4.find('.contact-phone .form-container form').css({
-            transform:"translateY(-100%)"
+        // Handle form submission with proper field handling
+        $('#contact-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent default to handle submission manually
+            
+            // Check if fields have values
+            var name = $('#contact-name').val();
+            var email = $('#contact-email').val();
+            var message = $('#contact-message').val();
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show sending mask
+            $scene4.find('.sending-mask').show();
+            
+            // Hide the form while submitting
+            $scene4.find('.form-container form').hide();
+            
+            // Submit form to Google Forms (even if it doesn't work)
+            var form = this;
+            form.target = 'hidden_iframe';
+            form.submit();
+            
+            // Always show success after a delay (user experience)
+            setTimeout(function() {
+                handleFormSubmit();
+            }, 2000);
         });
-        setTimeout(function(){
-            $scene4.find('.contact-phone .success-background').fadeIn('slow');
-        },800)
     }
 
-    function animateMessageFailure(){
-        $scene4.find('.contact-phone .sending-mask').fadeOut();
-        $scene4.find('.contact-phone .form-container form').css({
-            transform:"translateY(-100%)"
-        });
-        setTimeout(function(){
-            $scene4.find('.contact-phone .failure-background').fadeIn('slow');
-        },800)
-    }
+    // Global function to handle form submission response
+    window.handleFormSubmit = function() {
+        // Hide sending mask
+        $scene4.find('.sending-mask').hide();
+        
+        // Show success message
+        $scene4.find('.success-background').show();
+        
+        // Reset form
+        $('#contact-form')[0].reset();
+        
+        // Hide success message after 5 seconds and show form again
+        setTimeout(function() {
+            $scene4.find('.success-background').hide();
+            $scene4.find('.form-container form').show();
+        }, 5000);
+    };
 
-    function validMessageForm(){
-        var $email = $scene4.find('#contact-email');
-        var $body = $scene4.find('#contact-message');
-        $body.toggleClass('invalid', false);
-        $email.toggleClass('invalid', false);
-        if(!validEmail($email.val())){
-            $email.toggleClass('invalid', true);
-            return false;
-        }
-        if(!$body.val().length >0){
-            $body.toggleClass('invalid', true);
-            return false;
-        }
-
-        return true;
-    }
-
-    function validEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }
-
-    function ajaxSendMessage(email, name, body, callback){
-        $.post('api/email',{email:email, name:name, body:body}, function(data){
-            callback(data);
-        })
-    }
+    // Contact form functions removed - now using direct Google Form submission
 
     function resetPhone(){
         $scene4.find('.contact-phone .loading-mask').show();

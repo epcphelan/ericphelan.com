@@ -2,7 +2,7 @@
   "name": "ericphelan",
   "version": "1.0.0",
   "description": "Personal site",
-  "main": "app.js",
+  "main": "index.html",
   "author": "Eric Phelan",
   "license": "ISC",
   "scripts": {
@@ -10,17 +10,7 @@
     "build:js": "node build-js.js",
     "copy:assets": "cp -r src/assets/img dist/assets/ 2>/dev/null || echo 'No images to copy' && cp -r src/assets/media dist/assets/ 2>/dev/null || echo 'No media to copy'",
     "build:watch": "pug src --out dist --watch & sass src/assets/scss:dist/assets/css --watch --style compressed --load-path=src",
-    "start": "node app.js",
-    "dev": "npm run build && npm start"
-  },
-  "dependencies": {
-    "aws-sdk": "^2.1692.0",
-    "body-parser": "^1.20.2",
-    "bowser": "^2.11.0",
-    "express": "^4.18.2",
-    "mysql": "^2.18.1",
-    "nodemailer": "^6.9.7",
-    "superagent": "^8.1.2"
+    "dev": "npm run build && cd dist && python3 -m http.server 3000"
   },
   "devDependencies": {
     "pug-cli": "^1.0.0-alpha6",

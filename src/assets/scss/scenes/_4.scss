@@ -21,7 +21,7 @@
       .map{
         height:100%;
         width: 100%;
-        background-image: url("assets/img/map.jpg");
+        background-image: url("../img/map.jpg");
         background-size: cover;
         opacity: 0.45;
         transform: scale(1.8) rotate(10deg);
@@ -61,14 +61,11 @@
           line-height: 24px;
         }
         .coffee{
-          background: url("assets/img/coffee.png");
-          background-size:cover;
+          height:20px;
+          width:20px;
+          background: url("../img/coffee.png");
+          background-size: contain;
           background-repeat: no-repeat;
-          height:19px;
-          width: 24px;
-          margin-left: 10px;
-          margin-bottom: -5px;
-          display: inline-block;
         }
         .call-to-action{
           font-weight: bold;
@@ -88,7 +85,7 @@
             display: inline-block;
             height:600px;
             width: 300px;
-            background-image: url("assets/img/contact_phone.png");
+            background-image: url("../img/contact_phone.png");
             background-size: contain;
             background-repeat: no-repeat;
             .success-background{

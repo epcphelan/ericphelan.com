@@ -27,16 +27,18 @@ mixin scene_4
                                 .message
                                     h4(data-text-io="contact:form:success:heading")
                                     h5(data-text-io="contact:form:success:subheading")
+                                    p(style="margin-top: 15px; font-size: 14px; color: #666;") If it's urgent, send an email or SMS
                             .failure-background
                                 .message
                                     h4(data-text-io="contact:form:failure:heading")
                                     h5(data-text-io="contact:form:failure:subheading")
                             .form-container
-                                form(onsubmit="return false;" autocomplete="off")
-                                    input#contact-name(type="text" data-attr-io="placeholder|contact:form:name")
-                                    input#contact-email(type="text" data-attr-io="placeholder|contact:form:email")
-                                    textarea#contact-message(data-attr-io="placeholder|contact:form:message")
-                                    button.send-button(data-text-io="contact:form:send")
+                                form#contact-form(action="https://docs.google.com/forms/d/e/1FAIpQLSfhJeByAwdP6BEmvV2tjvgWawwoVKS1-1ZnoAzwuJAk4dz03g/formResponse" method="POST" target="hidden_iframe")
+                                    input#contact-name(name="Name" type="text" placeholder="Your Name" required)
+                                    input#contact-email(name="Email" type="email" placeholder="Your Email" required)
+                                    textarea#contact-message(name="Message" placeholder="Your Message" required)
+                                    button.send-button(type="submit") Send Message
+                                iframe#hidden_iframe(name="hidden_iframe" style="display:none;")
                 .content-right
                     .wrap
                         h4(data-text-io="contact:methods:heading")

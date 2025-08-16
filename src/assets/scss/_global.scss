@@ -16,13 +16,13 @@ body{
       background-size: contain;
       background-repeat: no-repeat;
       &.facebook{
-        background-image: url("assets/img/logos/facebook_icon.png");
+        background-image: url("../img/logos/facebook_icon.png");
       }
       &.instagram{
-        background-image: url("assets/img/logos/instagram_icon.png");
+        background-image: url("../img/logos/instagram_icon.png");
       }
       &.linkedin{
-        background-image: url("assets/img/logos/linkedin_icon.png");
+        background-image: url("../img/logos/linkedin_icon.png");
       }
     }
   }
@@ -113,7 +113,7 @@ body{
       .logo{
         height: 100%;
         width: 100%;
-        background-image: url("assets/img/logo.png");
+        background-image: url("../img/logo.png");
         background-size: contain;
         background-repeat: no-repeat;
       }
@@ -151,7 +151,7 @@ body{
       margin-top:60px;
       height:52px;
       width:36px;
-      background-image: url("assets/img/cv-download.png");
+      background-image: url("../img/cv-download.png");
       background-size: cover;
       transition: opacity 0.3s;
       &:hover{
@@ -327,7 +327,7 @@ body{
       left:-100px;
       opacity: 0;
       cursor: pointer;
-      background: url("assets/img/down-arrow-arrow.png");
+      background: url("../img/down-arrow-arrow.png");
       background-size: cover;
       height:50px;
       width:50px;
@@ -395,7 +395,7 @@ body{
       width:40px;
       position: absolute;
       left: -40px;
-      background-image: url("assets/img/right-tab-arrow.png");
+      background-image: url("../img/right-tab-arrow.png");
       background-repeat: no-repeat;
       top:calc(50% - 20px);
       transition: all 0.2s;
@@ -471,7 +471,7 @@ body{
       }
       .right-side-logo{
         .logo{
-          //background-image: url("assets/img/logo_black.png");
+          //background-image: url("../img/logo_black.png");
         }
       }
       .right-side-languages{

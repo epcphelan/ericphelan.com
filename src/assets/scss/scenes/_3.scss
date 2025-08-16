@@ -145,11 +145,11 @@
       height:10px;
       width: 12px;
       display: inline-block;
-      background-image: url("assets/img/pointer-right.png");
+      background-image: url("../img/pointer-right.png");
       background-size: contain;
       background-repeat: no-repeat;
       &.red{
-        background-image: url("assets/img/pointer-right-red.png");
+        background-image: url("../img/pointer-right-red.png");
       }
     }
   }
@@ -1212,12 +1212,11 @@
                 width:80%;
               }
               .zigzag{
-                margin: 10px 0 10px 0;
-                background-image: url("assets/img/zigzag.png");
+                height:100%;
+                width: 100%;
+                background-image: url("../img/zigzag.png");
+                background-size: cover;
                 background-repeat: no-repeat;
-                height: 10px;
-                width:50px;
-                background-color: transparent;
               }
               .role{
                 letter-spacing: 1.1px;
@@ -1968,23 +1967,12 @@
       .shell {
         .blurb {
           width: 70% !important;
-          .logo_header {
-            width: 100% !important;
-          }
-          .role_bar {
-            max-width: 85%;
-          }
-          .description {
-            max-width: 90%;
+          top: 5% !important;
+          .logo_header, .role_bar, .description {
+            margin-left: 0px !important;
           }
           .logos {
-            img {
-              margin: 2% !important;
-              height: 25px !important;
-              &.tulane {
-                height: 35px !important;
-              }
-            }
+            display: none !important;
           }
         }
       }
@@ -1993,6 +1981,16 @@
       .shell {
         .blurb {
           width: 70% !important;
+          top: 15% !important;
+          .info {
+            width: 100% !important;
+            .role {
+              font-size: 10px !important;
+            }
+          }
+          .experience {
+            display: none;
+          }
           .logos {
             margin-top: 50px !important;
             img {

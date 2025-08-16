@@ -1,160 +1,115 @@
-# ericphelan.com
+# Eric Phelan - Personal Website
 
-Personal Website for Eric Phelan - Full-Stack Developer, Problem Solver and Entrepreneur
+A modern, responsive personal website built with Pug templates, SCSS, and vanilla JavaScript.
 
-## Local Development Setup
+## 🚀 **Features**
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm (comes with Node.js)
+- **Modern Build System**: Pug templates, SCSS compilation, JavaScript minification
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Contact Form**: Google Forms integration (no server required)
+- **Case Studies**: Portfolio showcase with interactive elements
+- **Static Site**: Ready for deployment to S3, CloudFront, or any static hosting
 
-### Quick Start
-1. **Install dependencies:**
+## 🛠 **Tech Stack**
+
+- **Templates**: Pug (formerly Jade)
+- **Styles**: SCSS with modern CSS features
+- **JavaScript**: Vanilla JS with minification
+- **Build Tools**: Pug CLI, Sass, Terser
+- **Deployment**: AWS S3 + CloudFront (optional)
+
+## 📦 **Installation**
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd ericphelan.com
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. **Build the project:**
+3. **Build the project**
    ```bash
    npm run build
    ```
 
-3. **Start the development server:**
-   ```bash
-   npm start
-   ```
+## 🔧 **Available Scripts**
 
-4. **Open your browser:**
-   Navigate to `http://localhost:80` (or the port specified in `config.json`)
+- **`npm run build`** - Build the complete project
+- **`npm run build:watch`** - Watch for changes and rebuild automatically
+- **`npm run dev`** - Build and serve locally with Python HTTP server
 
-### Development Commands
-- `npm run build` - Build the project once (compiles Pug, SCSS, and minifies JavaScript)
-- `npm run build:js` - Build only JavaScript files (minification and concatenation)
-- `npm run build:watch` - Build and watch for changes
-- `npm start` - Start the Express server
-- `npm run dev` - Build and start the server
+## 📁 **Project Structure**
 
-### Project Structure
 ```
-├── src/                    # Source files
-│   ├── assets/            # Assets (SCSS, JS, images)
-│   ├── cases/             # Case study templates
-│   ├── mixins/            # Reusable template components
-│   └── *.pug              # Main page templates (converted from .jade)
-├── dist/                   # Compiled output (created by build)
-├── app.js                  # Express server
-├── config.json            # Configuration
-├── build-js.js            # JavaScript build script
-└── package.json           # Dependencies and scripts
-```
-
-## Build Process
-
-### What Gets Built
-1. **Pug Templates** → HTML files
-2. **SCSS Files** → Minified CSS
-3. **JavaScript Files** → Minified and concatenated JS files
-4. **jQuery** → Automatically downloaded and included
-
-### JavaScript Build Details
-The build process handles CodeKit-style concatenation directives:
-- `scenes.js` → `scenes-min.js` (concatenates all scene files)
-- `plugins.js` → `plugins-min.js` (concatenates jQuery plugins)
-- `libs.js` → `libs-min.js` (concatenates library files)
-- Individual lib files → `*-min.js` versions
-
-### Build Output
-```
-dist/
+src/
 ├── assets/
-│   ├── css/               # Compiled SCSS
-│   └── js/
-│       ├── lib/           # Minified library files
-│       │   ├── jquery-3.2.1.min.js
-│       │   ├── caseStudy-min.js
-│       │   └── ...
-│       ├── pageLoad-min.js
-│       ├── eric-min.js
-│       ├── libs-min.js
-│       ├── plugins-min.js
-│       └── scenes-min.js
-└── *.html                 # Compiled Pug templates
+│   ├── img/          # Images and graphics
+│   ├── media/        # Videos and documents
+│   ├── js/           # JavaScript source files
+│   └── scss/         # SCSS stylesheets
+├── cases/            # Case study templates
+├── mixins/           # Reusable Pug components
+└── index.pug         # Main page template
+
+dist/                 # Built output (generated)
 ```
 
-## Deployment to AWS S3
+## 🌐 **Deployment**
 
-### Asset Path Fixes ✅
-The project has been successfully updated to use relative paths instead of hardcoded `http://assets.ericphelan.com` URLs. This ensures compatibility with S3 deployment.
-
-**What was fixed:**
-- All hardcoded asset URLs in Jade/Pug templates
-- All hardcoded asset URLs in SCSS files
-- All hardcoded asset URLs in JavaScript files
-- Include statements for proper template compilation
-- JavaScript minification and concatenation build process
-
-### S3 Deployment Steps
-1. **Build the project:**
-   ```bash
-   npm run build
-   ```
-
-2. **Upload to S3:**
-   - Upload the entire `dist/` folder contents to your S3 bucket
-   - Ensure the bucket is configured for static website hosting
-   - Set the index document to `index.html`
-
-3. **Configure CloudFront (recommended for HTTPS):**
-   - Create a CloudFront distribution pointing to your S3 bucket
-   - Configure the default root object as `index.html`
-   - Set up error pages (404.html for 404 errors)
-
-### Important Notes
-- All asset paths are now relative (e.g., `assets/css/styles.css` instead of `http://assets.ericphelan.com/css/styles.css`)
-- The build process compiles Pug templates to HTML and SCSS to CSS
-- JavaScript files are minified, concatenated, and optimized for production
-- All templates have been converted from `.jade` to `.pug` format for modern compatibility
-- jQuery is automatically downloaded during the build process
-
-## Troubleshooting
-
-### Port Issues
-If you get permission errors on port 80, change the port in `config.json`:
-```json
-{
-  "http_port": 3000
-}
+### **Local Development**
+```bash
+npm run dev
+# Opens http://localhost:8000
 ```
 
-### Build Issues
-- Ensure you have the latest Node.js version
-- Clear `node_modules` and run `npm install` again
-- Check that `pug-cli`, `sass`, and `terser` are installed
+### **AWS S3 Deployment**
+1. **Build the project**: `npm run build`
+2. **Sync to S3**: `aws s3 sync dist/ s3://your-bucket --delete`
+3. **Optional**: Set up CloudFront for HTTPS and custom domain
 
-### Asset Loading Issues
-- Verify the `dist/` folder contains all compiled files
-- Check that asset paths are relative (not absolute URLs)
-- Ensure all required images and files are present in the `dist/assets/` folder
-- Run `npm run build:js` to rebuild JavaScript files if needed
+### **GitHub Actions (Automated)**
+- Push to `master` branch triggers automatic build and deployment
+- Configure AWS credentials in GitHub Secrets
+- See `.github/workflows/deploy.yml` for details
 
-### JavaScript Build Issues
-- If minified files are empty, check the source files for CodeKit directives
-- Ensure all referenced files in concatenation directives exist
-- Check the build-js.js script for any errors
+## 📝 **Contact Form**
 
-## Original Build Tools
-This project was originally built with CodeKit 3. The current setup provides equivalent functionality using:
-- **Pug CLI** (replaces Jade compilation)
-- **Sass** (replaces SCSS compilation)
-- **Terser** (replaces JavaScript minification)
-- **Node.js scripts** (replaces CodeKit build process and concatenation)
+The contact form submits directly to Google Forms:
+- **No server required** - form works without backend
+- **Automatic responses** - saves to Google Sheets
+- **Free forever** - Google Forms is completely free
 
-## Current Status ✅
-- **Local Development**: Working
-- **Asset Paths**: Fixed for S3 compatibility
-- **Build Process**: Automated with npm scripts
-- **Template Compilation**: Successfully converts Pug to HTML
-- **SCSS Compilation**: Successfully converts SCSS to CSS
-- **JavaScript Build**: Minification, concatenation, and optimization working
-- **Server**: Express server running and serving content
-- **jQuery**: Automatically downloaded and included
+## 🔍 **Troubleshooting**
+
+### **Build Issues**
+- Ensure Node.js 18+ is installed
+- Run `npm install` to install dependencies
+- Check that all source files exist in `src/` directory
+
+### **Missing Images**
+- Run `npm run build` to copy image assets
+- Ensure `src/assets/img/` contains required images
+- Check file permissions and paths
+
+### **Deployment Issues**
+- Verify AWS credentials and permissions
+- Check S3 bucket configuration (static hosting enabled)
+- Ensure CloudFront origin points to S3 website endpoint
+
+## 📚 **Documentation**
+
+- **`DEPLOYMENT.md`** - Detailed AWS deployment guide
+- **`QUICK_DEPLOY.md`** - Quick deployment checklist
+- **`GOOGLE_FORM_SETUP.md`** - Google Forms configuration
+
+## 🤝 **Contributing**
+
+This is a personal website project. For questions or suggestions, please contact Eric Phelan.
+
+## 📄 **License**
+
+ISC License - see LICENSE file for details.
