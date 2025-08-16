@@ -22,13 +22,8 @@ if (!fs.existsSync(distImgDir)) {
 
 // Create subdirectories for images
 const imgSubdirs = [
-    'logos',
-    'thumbs',
-    'flipboards',
-    'flipboards/stock',
-    'lassa'
+    'logos', 'thumbs', 'flipboards', 'flipboards/stock', 'lassa'
 ];
-
 imgSubdirs.forEach(subdir => {
     const subdirPath = path.join(distImgDir, subdir);
     if (!fs.existsSync(subdirPath)) {
@@ -42,7 +37,6 @@ if (!fs.existsSync(jqueryPath)) {
     console.log('Downloading jQuery 3.2.1...');
     const jqueryUrl = 'https://code.jquery.com/jquery-3.2.1.min.js';
     const file = fs.createWriteStream(jqueryPath);
-    
     https.get(jqueryUrl, (response) => {
         if (response.statusCode === 200) {
             response.pipe(file);
@@ -64,11 +58,9 @@ if (!fs.existsSync(jqueryPath)) {
 // Function to process CodeKit concatenation files
 function processCodeKitFile(filePath) {
     if (!fs.existsSync(filePath)) return '';
-    
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     let concatenatedContent = '';
-    
     lines.forEach(line => {
         const match = line.match(/\/\/ @codekit-append "([^"]+)"/);
         if (match) {
@@ -80,28 +72,21 @@ function processCodeKitFile(filePath) {
             }
         }
     });
-    
     return concatenatedContent;
 }
 
 // Process concatenation files first
 console.log('Processing CodeKit concatenation files...');
-
-// Process scenes.js
 const scenesContent = processCodeKitFile(path.join(__dirname, 'src', 'assets', 'js', 'scenes.js'));
 if (scenesContent) {
     fs.writeFileSync(path.join(__dirname, 'src', 'assets', 'js', 'scenes-concatenated.js'), scenesContent);
     console.log('✓ Created scenes-concatenated.js');
 }
-
-// Process plugins.js
 const pluginsContent = processCodeKitFile(path.join(__dirname, 'src', 'assets', 'js', 'plugins.js'));
 if (pluginsContent) {
     fs.writeFileSync(path.join(__dirname, 'src', 'assets', 'js', 'plugins-concatenated.js'), pluginsContent);
     console.log('✓ Created plugins-concatenated.js');
 }
-
-// Process libs.js
 const libsContent = processCodeKitFile(path.join(__dirname, 'src', 'assets', 'js', 'libs.js'));
 if (libsContent) {
     fs.writeFileSync(path.join(__dirname, 'src', 'assets', 'js', 'libs-concatenated.js'), libsContent);
@@ -120,7 +105,6 @@ const mainJsFiles = [
 mainJsFiles.forEach(({ src, dest }) => {
     const srcPath = path.join(__dirname, 'src', 'assets', 'js', src);
     const destPath = path.join(distJsDir, dest);
-    
     if (fs.existsSync(srcPath)) {
         try {
             execSync(`npx terser "${srcPath}" -o "${destPath}" -c -m --source-map`, { stdio: 'inherit' });
@@ -135,34 +119,16 @@ mainJsFiles.forEach(({ src, dest }) => {
 
 // Build lib JS files
 const libJsFiles = [
-    'caseStudy.js',
-    'caseLoadingFunctions.js',
-    'caseScroll.js',
-    'cases.js',
-    'cvDisplay.js',
-    'dataTextIO.js',
-    'fingerprint2.js',
-    'flipBoard.js',
-    'flipSquare.js',
-    'floatingHero.js',
-    'glitch.js',
-    'menu.js',
-    'peekABooTwo.js',
-    'photoMorph.js',
-    'scrollHint.js',
-    'scrollPlayer.js',
-    'shootingStar.js',
-    'siteTracking.js',
-    'speedBoost.js',
-    'terminalTypeout.js',
-    'unfoldingCards.js',
-    'bloomingSkills.js'
+    'caseStudy.js', 'caseLoadingFunctions.js', 'caseScroll.js', 'cases.js', 'cvDisplay.js',
+    'dataTextIO.js', 'fingerprint2.js', 'flipBoard.js', 'flipSquare.js', 'floatingHero.js',
+    'glitch.js', 'menu.js', 'peekABooTwo.js', 'photoMorph.js', 'scrollHint.js',
+    'scrollPlayer.js', 'shootingStar.js', 'siteTracking.js', 'speedBoost.js',
+    'terminalTypeout.js', 'unfoldingCards.js', 'bloomingSkills.js'
 ];
 
 libJsFiles.forEach(file => {
     const srcPath = path.join(__dirname, 'src', 'assets', 'js', 'lib', file);
     const destPath = path.join(distJsLibDir, file.replace('.js', '-min.js'));
-    
     if (fs.existsSync(srcPath)) {
         try {
             execSync(`npx terser "${srcPath}" -o "${destPath}" -c -m --source-map`, { stdio: 'inherit' });

@@ -8,7 +8,7 @@ var Cases = null,
 
 function PageLoad(){
     var styles = 'assets/css/styles.css';
-    var bodyContent ='contents';
+    var bodyContent ='contents.html';
     var javaScripts = [
         'assets/js/plugins-min.js',
         'assets/js/eric-min.js',
